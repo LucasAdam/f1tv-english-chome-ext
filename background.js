@@ -1,7 +1,7 @@
 chrome.webRequest.onBeforeSendHeaders.addListener(
-    function(details) {
+    (details) => {
         var headers = details.requestHeaders
-        if (details.url === 'https://f1tv.formula1.com/api/commentary-tracks/?fields=name,uid,language_code,language_code_alt') {
+        if (details.url.indexOf('https://f1tv.formula1.com/api/commentary-tracks') === 0) {
             headers = []
         }
         return { requestHeaders: headers };
