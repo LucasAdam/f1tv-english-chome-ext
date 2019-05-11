@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "F1TV English",
-    "version": "0.0.1",
-    "description": "Listen to english commentary in Belgium",
+    "version": "0.0.2",
+    "description": "Listen to english commentary in any country",
     "background": {
         "scripts": ["background.js"],
         "persistent": true
