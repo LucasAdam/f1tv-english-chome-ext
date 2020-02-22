@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "F1TV English",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Listen to english commentary in any country",
     "background": {
         "scripts": ["background.js"],
