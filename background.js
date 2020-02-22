@@ -1,10 +1,10 @@
 chrome.webRequest.onBeforeSendHeaders.addListener(
     (details) => {
-        var headers = details.requestHeaders
-        if (details.url.indexOf('https://f1tv.formula1.com/api/commentary-tracks') === 0) {
-            headers = []
+        if (details.url.includes('commentary-tracks')) {
+            details.requestHeaders = []
+            details.requestHeaders.push({name:"X-CountryCode",value:"FR"})
         }
-        return { requestHeaders: headers };
+        return { requestHeaders: details.requestHeaders };
     },
     {urls: ['https://*.formula1.com/*']},
     ['blocking', 'requestHeaders']
